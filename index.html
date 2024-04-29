@@ -17,17 +17,17 @@
           </div>
           <div class="col">
             <div><img src="imagens/imagem.png" alt=""></div>
-            <form>
+            <form method="post" action="logon.php">
                 <div class="mb-3">
                   <label for="exampleInputEmail1" class="form-label">Login</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite seu login">
+                  <input type="email" class="form-control" name = "login" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite seu login">
                 </div>
                 <div class="mb-3">
                   <label for="exampleInputPassword1" class="form-label">Senha</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Digite sua senha">
+                  <input type="password" class="form-control" name = "senha" id="exampleInputPassword1" placeholder="Digite sua senha">
                 </div>
                 <div clas="botao">
-                <a class="btn btn-secondary" href="cadastro_cliente.html" role="button">Enviar</a>&ensp;&ensp;&ensp;
+                <button type = "submit" class = "btn btn-secondary"> Enviar </button> &ensp;&ensp;&ensp;
                 <a class="btn btn-secondary" href="cadastro_user.html" role="button">Cadastrar</a>
                 </div>
               </form>
