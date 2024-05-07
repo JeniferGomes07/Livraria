@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Tempo de geração: 23-Abr-2024 às 02:19
+-- Tempo de geração: 07-Maio-2024 às 02:20
 -- Versão do servidor: 8.0.27
 -- versão do PHP: 8.2.0
 
@@ -82,15 +82,7 @@ CREATE TABLE `tb_user` (
 
 INSERT INTO `tb_user` (`id_usuario`, `nm_usuario`, `nm_setor`, `login`, `senha`, `confirme`) VALUES
 (1, 'Gicelly Gomes', 'TI', 'gicellygomes@gmail.com', 'root', '123456'),
-(2, 'pão', 'queijo', 'queijopao@gmail.com', '123456', '123456'),
-(3, '', '', '', '', ''),
-(4, '', '', '', '', ''),
-(5, '', '', '', '', ''),
-(6, '', '', '', '', ''),
-(7, '', '', '', '', ''),
-(8, 'gi', 'ti', 'gi@gmail.com', '12345', '12345'),
-(9, '', '', '', '', ''),
-(10, 'gi', 'ti', 'gi@gmail.com', '123', '123');
+(2, 'pão', 'queijo', 'queijopao@gmail.com', '123456', '123456');
 
 --
 -- Índices para tabelas despejadas
