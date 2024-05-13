@@ -44,24 +44,31 @@
 <table class="table">
   <thead>
     <tr>
-      <th scope="col">ID</th>
+      <th scope="col">Código</th>
       <th scope="col">Nome</th>
-      <th scope="col">Setor</th>
-      <th scope="col">Login</th>
+      <th scope="col">Endereço</th>
+      <th scope="col">Número endereço</th>
+      <th scope="col">CPF</th>
+      <th scope="col">CNPJ</th>
+      <th scope="col">Telefone</th>
+
     </tr>
   </thead>
   <tbody>
     <?php 
     include 'conexao.php'; 
-    $select = "SELECT * FROM tb_user";
+    $select = "SELECT * FROM tb_cliente";
     $query = mysqli_query($conexao, $select);
     while ($result = mysqli_fetch_array($query)){
     ?>
     <tr>
-      <th scope="row"><?php echo $result['id_usuario']; ?> </th>
-      <td><?php echo $result['nm_usuario']; ?> </td>
-      <td><?php echo $result['nm_setor']; ?> </td>
-      <td><?php echo $result['login']; ?> </td>
+      <th scope="row"><?php echo $result['cd_cliente']; ?> </th>
+      <td><?php echo $result['nm_cliente']; ?> </td>
+      <td><?php echo $result['nm_endereco']; ?> </td>
+      <td><?php echo $result['nr_endereco']; ?> </td>
+      <td><?php echo $result['nr_cpf']; ?> </td>
+      <td><?php echo $result['nr_cnpj']; ?> </td>
+      <td><?php echo $result['nr_telefone']; ?> </td>
     </tr>
 
     <?php } ?>
