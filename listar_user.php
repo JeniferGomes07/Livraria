@@ -8,6 +8,14 @@
     <script src="https://kit.fontawesome.com/c0f408d1cc.js" crossorigin="anonymous"></script>
 </head>
 <body>
+  <style>
+    .icon{
+      color: black;
+    }
+    .icon2{
+      color: red;
+    }
+  </style>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
       <a class="navbar-brand" href="#"><i class="fa-solid fa-book"></i></a>
@@ -48,6 +56,7 @@
       <th scope="col">Nome</th>
       <th scope="col">Setor</th>
       <th scope="col">Login</th>
+      <th scope="col">Ações</th>
     </tr>
   </thead>
   <tbody>
@@ -62,6 +71,10 @@
       <td><?php echo $result['nm_usuario']; ?> </td>
       <td><?php echo $result['nm_setor']; ?> </td>
       <td><?php echo $result['login']; ?> </td>
+      <td>
+     <a href="edit_user.php?cod=<?php echo $result['id_usuario']; ?>"><i class="icon fa-solid fa-user-pen"></i></a> 
+     <a href=""><i class="icon2 fa-solid fa-trash-can"></i></a> 
+    </td>
     </tr>
 
     <?php } ?>

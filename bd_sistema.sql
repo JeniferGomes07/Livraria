@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Tempo de geração: 07-Maio-2024 às 02:20
+-- Tempo de geração: 28-Maio-2024 às 02:48
 -- Versão do servidor: 8.0.27
 -- versão do PHP: 8.2.0
 
@@ -43,7 +43,8 @@ CREATE TABLE `tb_cliente` (
 
 INSERT INTO `tb_cliente` (`cd_cliente`, `nm_cliente`, `nm_endereco`, `nr_endereco`, `nr_cpf`, `nr_cnpj`, `nr_telefone`) VALUES
 (1, 'Gicelly ', 'rua bruna tamagnini de souza ', 880, '1452456875', '42157854257635', '1144524365'),
-(2, 'Gicelly ', 'rua bruna tamagnini de souza ', 252, '45785245789', '45217856952', '4154572');
+(2, 'Gicelly ', 'rua bruna tamagnini de souza ', 252, '45785245789', '45217856952', '4154572'),
+(3, 'nome', 'endereço', 123, '11111111111', '11111111111111', '13111111111');
 
 -- --------------------------------------------------------
 
@@ -60,6 +61,13 @@ CREATE TABLE `tb_editora` (
   `nr_telefone` varchar(11) NOT NULL,
   `nm_gerente` varchar(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+
+--
+-- Extraindo dados da tabela `tb_editora`
+--
+
+INSERT INTO `tb_editora` (`cd_editora`, `nm_editora`, `nm_endereco`, `nr_endereco`, `nm_bairro`, `nr_telefone`, `nm_gerente`) VALUES
+(1, 'nome', 'endereço', 133, 'bairro', '13333333333', 'gerente');
 
 -- --------------------------------------------------------
 
@@ -81,8 +89,11 @@ CREATE TABLE `tb_user` (
 --
 
 INSERT INTO `tb_user` (`id_usuario`, `nm_usuario`, `nm_setor`, `login`, `senha`, `confirme`) VALUES
-(1, 'Gicelly Gomes', 'TI', 'gicellygomes@gmail.com', 'root', '123456'),
-(2, 'pão', 'queijo', 'queijopao@gmail.com', '123456', '123456');
+(1, 'Gicelly Gomes  ', 'Ti', 'gicellygomes@gmail.com', 'root', '123456'),
+(2, 'pão', 'queijo', 'queijopao@gmail.com', '123456', '123456'),
+(11, 'Gicelly Gomes', 'TI', 'gicellygomes@gmail.com', '', ''),
+(12, 'Gicelly Gomes', 'SIMPONS', 'gicellygomes@gmail.com', '', ''),
+(13, 'Gicelly Gomes', 'SIMPONS', 'gicellygomes@gmail.com', '', '');
 
 --
 -- Índices para tabelas despejadas
@@ -114,19 +125,19 @@ ALTER TABLE `tb_user`
 -- AUTO_INCREMENT de tabela `tb_cliente`
 --
 ALTER TABLE `tb_cliente`
-  MODIFY `cd_cliente` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `cd_cliente` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de tabela `tb_editora`
 --
 ALTER TABLE `tb_editora`
-  MODIFY `cd_editora` int NOT NULL AUTO_INCREMENT;
+  MODIFY `cd_editora` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de tabela `tb_user`
 --
 ALTER TABLE `tb_user`
-  MODIFY `id_usuario` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_usuario` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
