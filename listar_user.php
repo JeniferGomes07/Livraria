@@ -28,7 +28,7 @@
             <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="cadastro_cliente.html">Cadastro de clientes</a>
+            <a class="nav-link" href="cadastro_cliente2.php">Cadastro de clientes</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="cadastro_editora.html">Cadastro Editora</a>
@@ -73,7 +73,7 @@
       <td><?php echo $result['login']; ?> </td>
       <td>
      <a href="edit_user.php?cod=<?php echo $result['id_usuario']; ?>"><i class="icon fa-solid fa-user-pen"></i></a> 
-     <a href=""><i class="icon2 fa-solid fa-trash-can"></i></a> 
+     <a href="deletar_user.php?cod=<?php echo $result['id_usuario']; ?>"><i class="icon2 fa-solid fa-trash-can"></i></a> 
     </td>
     </tr>
 

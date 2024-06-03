@@ -20,7 +20,7 @@
             <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="cadastro_cliente.html">Cadastro de clientes</a>
+            <a class="nav-link" href="cadastro_cliente2.php">Cadastro de clientes</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="cadastro_editora.html">Cadastro Editora</a>
