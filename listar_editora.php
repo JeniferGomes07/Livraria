@@ -7,6 +7,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/c0f408d1cc.js" crossorigin="anonymous"></script>
 <body>
+<style>
+    .icon{
+      color: black;
+    }
+    .icon2{
+      color: red;
+    }
+  </style>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
       <a class="navbar-brand" href="#"><i class="fa-solid fa-book"></i></a>
@@ -22,7 +30,7 @@
             <a class="nav-link" href="cadastro_cliente2.php">Cadastro de clientes</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="cadastro_editora.html">Cadastro Editora</a>
+            <a class="nav-link" href="cadastro_editora2.php">Cadastro Editora</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -37,9 +45,22 @@
         </ul>
       </div>
     </div>
+    <div style = "color: black;">
+      <?php
+      session_start();
+      if(isset($_SESSION['username'])){
+        $username = $_SESSION['username'];
+        echo "Seja bem vindo, $username";
+      }
+      else{
+        echo "<script>alert('Usuário precisar logar');history.back();</script>";
+      }
+      ?>
+      </div>
+      <span> <a class = "navbar-brand" href = "sair.php"><i class="fa-solid fa-right-from-bracket"></i></a></span>
   </nav>
     <div class = "container">
-        <h2>Lista de Usuários</h2>
+        <h2>Lista de Editoras</h2>
 <table class="table">
   <thead>
     <tr>
@@ -50,6 +71,7 @@
       <th scope="col">Nome do bairro</th>
       <th scope="col">Telefone</th>
       <th scope="col">Nome do gerente</th>
+      <th scope="col">Ações</th>
 
     </tr>
   </thead>
@@ -68,6 +90,10 @@
       <td><?php echo $result['nm_bairro']; ?> </td>
       <td><?php echo $result['nr_telefone']; ?> </td>
       <td><?php echo $result['nm_gerente']; ?> </td>
+      <td>
+     <a href="edit_editora.php?cod=<?php echo $result['cd_editora']; ?>"><i class="icon fa-solid fa-user-pen"></i></a> 
+     <a href="deletar_editora.php?cod=<?php echo $result['cd_editora']; ?>"><i class="icon2 fa-solid fa-trash-can"></i></a> 
+    </td>
     </tr>
     <?php } ?>
 

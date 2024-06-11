@@ -57,33 +57,33 @@
         <div class="row">
           <div class="col"></div>
           <div class="col">
-            <form class="user" action="cadastro_cliente.php" method="post">  
+            <form class="user" action="cadastro_editora.php" method="post">  
                 <div class="mb-3">
                   <label for="exampleInputEmail1" class="form-label">Nome</label>
-                  <input type="text" class="form-control" id="exampleInputEmail1" name="nomecliente" aria-describedby="emailHelp" placeholder="Digite seu nome">
+                  <input type="text" class="form-control" id="exampleInputEmail1" name="nomeEditora" aria-describedby="emailHelp" placeholder="Digite seu nome">
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Endereço</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" name="enderecocliente" aria-describedby="emailHelp" placeholder="Digite seu endereço">
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="enderecoEditora" aria-describedby="emailHelp" placeholder="Digite seu endereço">
                   </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Número do endereço</label>
-                    <input type="number" class="form-control" id="exampleInputEmail1" name="numeroendereco" aria-describedby="emailHelp" placeholder="Digite seu número do endereço">
+                    <input type="number" class="form-control" id="exampleInputEmail1" name="numeroEnderecoEditora" aria-describedby="emailHelp" placeholder="Digite seu número do endereço">
                   </div>
                 <div class="mb-3">
-                  <label for="exampleInputPassword1" class="form-label">CPF</label>
-                  <input type="number" class="form-control" id="exampleInputPassword1" name="numerocpf" placeholder="Digite seu cpf">
+                  <label for="exampleInputPassword1" class="form-label">Nome do bairro</label>
+                  <input type="text" class="form-control" id="exampleInputPassword1" name="nomeBairroEditora" placeholder="Digite seu bairro">
                 </div>
-                <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">CNPJ</label>
-                    <input type="number" class="form-control" id="exampleInputPassword1" name="numerocnpj" placeholder="Digite seu cnpj">
-                  </div>
                   <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Telefone</label>
-                    <input type="number" class="form-control" id="exampleInputPassword1" name="numerotelefone" placeholder="Digite seu telefone">
+                    <input type="number" class="form-control" id="exampleInputPassword1" name="numeroTelefoneEditora" placeholder="Digite seu telefone">
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Nome do gerente</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1" name="nomeGerente" placeholder="Digite o nome do seu gerente">
                   </div>
                 <div class="botao">
-                <a class="btn btn-secondary" href="index.html" role="button">Voltar</a> &ensp;&ensp;&ensp;
+                <a class="btn btn-secondary" href="cadastro_cliente.html" role="button">Voltar</a> &ensp;&ensp;&ensp;
                 <button type="submit" class="btn btn-secondary">Cadastrar</button>
                 </div>
               </form>

@@ -31,7 +31,7 @@
             <a class="nav-link" href="cadastro_cliente2.php">Cadastro de clientes</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="cadastro_editora.html">Cadastro Editora</a>
+            <a class="nav-link" href="cadastro_editora2.php">Cadastro Editora</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -46,6 +46,19 @@
         </ul>
       </div>
     </div>
+    <div style = "color: black;">
+      <?php
+      session_start();
+      if(isset($_SESSION['username'])){
+        $username = $_SESSION['username'];
+        echo "Seja bem vindo, $username";
+      }
+      else{
+        echo "<script>alert('Usuário precisar logar');history.back();</script>";
+      }
+      ?>
+      </div>
+      <span> <a class = "navbar-brand" href = "sair.php"><i class="fa-solid fa-right-from-bracket"></i></a></span>
   </nav>
     <div class = "container">
         <h2>Lista de Usuários</h2>

@@ -8,6 +8,14 @@
     <script src="https://kit.fontawesome.com/c0f408d1cc.js" crossorigin="anonymous"></script>
 </head>
 <body>
+<style>
+    .icon{
+      color: black;
+    }
+    .icon2{
+      color: red;
+    }
+  </style>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
       <a class="navbar-brand" href="#"><i class="fa-solid fa-book"></i></a>
@@ -23,7 +31,7 @@
             <a class="nav-link" href="cadastro_cliente2.php">Cadastro de clientes</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="cadastro_editora.html">Cadastro Editora</a>
+            <a class="nav-link" href="cadastro_editora2.php">Cadastro Editora</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -38,9 +46,22 @@
         </ul>
       </div>
     </div>
+    <div style = "color: black;">
+      <?php
+      session_start();
+      if(isset($_SESSION['username'])){
+        $username = $_SESSION['username'];
+        echo "Seja bem vindo, $username";
+      }
+      else{
+        echo "<script>alert('Usuário precisar logar');history.back();</script>";
+      }
+      ?>
+      </div>
+      <span> <a class = "navbar-brand" href = "sair.php"><i class="fa-solid fa-right-from-bracket"></i></a></span>
   </nav>
     <div class = "container">
-        <h2>Lista de Usuários</h2>
+        <h2>Lista de Clientes</h2>
 <table class="table">
   <thead>
     <tr>
@@ -51,6 +72,7 @@
       <th scope="col">CPF</th>
       <th scope="col">CNPJ</th>
       <th scope="col">Telefone</th>
+      <th scope="col">Ações</th>
 
     </tr>
   </thead>
@@ -69,6 +91,10 @@
       <td><?php echo $result['nr_cpf']; ?> </td>
       <td><?php echo $result['nr_cnpj']; ?> </td>
       <td><?php echo $result['nr_telefone']; ?> </td>
+      <td>
+     <a href="edit_cliente.php?cod=<?php echo $result['cd_cliente']; ?>"><i class="icon fa-solid fa-user-pen"></i></a> 
+     <a href="deletar_cliente.php?cod=<?php echo $result['cd_cliente']; ?>"><i class="icon2 fa-solid fa-trash-can"></i></a> 
+    </td>
     </tr>
 
     <?php } ?>
