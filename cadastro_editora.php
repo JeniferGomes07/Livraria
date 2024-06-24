@@ -14,6 +14,12 @@ $insert = "INSERT INTO tb_editora VALUES (NULL,'$nome_editora','$endereco_editor
 $query = mysqli_query($conexao, $insert);
  
 echo "Inserido com Sucesso";
+
+if($query){
+    echo "<script>alert('Cadastrado com sucesso'); history.back();</script>";
+} else{
+    echo "<script>alert(Error no script php); history.back();</script>";
+}
  
  
 ?>
